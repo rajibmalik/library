@@ -37,11 +37,12 @@ export class Library {
     const row = document.createElement("tr");
 
     const header = document.createElement("th");
+    tableFooter.innerHTML = "";
     header.textContent = `Total number of books: ${this.myLibrary.length} `;
     header.setAttribute("colspan", "4");
 
     row.append(header);
 
-    tableFooter.append(row); // Don't forget to append the row to the tableBody!
+    tableFooter.append(row);
   }
 }
