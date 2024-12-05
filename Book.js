@@ -1,5 +1,7 @@
 export class Book {
+  static id = 1;
   constructor(title, author, pages, read) {
+    this.id = Book.id++;
     this.title = title;
     this.author = author;
     this.pages = pages;

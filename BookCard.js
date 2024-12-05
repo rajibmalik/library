@@ -5,24 +5,28 @@ export class BookCard {
 
     this.title = document.createElement("p");
     this.title.textContent = `Title: ${title}`;
-    this.title.id = "cardInfo";
+    this.title.className = "cardInfo";
 
     this.author = document.createElement("p");
     this.author.textContent = `Author: ${author}`;
-    this.author.id = "cardInfo";
+    this.author.className = "cardInfo";
 
     this.pages = document.createElement("p");
     this.pages.textContent = `Pages: ${pages}`;
-    this.pages.id = "cardInfo";
+    this.pages.className = "cardInfo";
 
     this.read = document.createElement("p");
     this.read.textContent = read;
-    this.read.id = "cardInfo";
+    this.read.className = "cardInfo";
+
+    this.buttonContainer = document.createElement("div");
+    this.buttonContainer.className = "bookCardButtonContainer";
 
     this.card.appendChild(this.title);
     this.card.appendChild(this.author);
     this.card.appendChild(this.pages);
     this.card.appendChild(this.read);
+    this.card.appendChild(this.buttonContainer);
   }
 
   addCard(container) {

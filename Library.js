@@ -30,6 +30,12 @@ export class Library {
         book.pages,
         book.read
       );
+
+      const deleteButton = document.createElement("button");
+      deleteButton.className = "deleteButton";
+
+      bookCard.buttonContainer.appendChild(deleteButton);
+
       this.addBookCard(bookRow, bookCard);
       this.cardGrid.appendChild(bookRow);
     }

@@ -6,9 +6,6 @@ const showButton = document.getElementById("modalBtn");
 const closeButton = document.getElementById("closeBtn");
 const dialogForm = document.getElementById("dialogForm");
 
-// const addBookBtn = document.getElementById("addBookBtn");
-// const formContainer = document.getElementById("formContainer");
-
 const library = new Library();
 const hobbit = new Book("The Hobbit", "J.R.R Tolkien", 295, "No");
 library.addBookToLibrary(hobbit);
@@ -24,10 +21,13 @@ library.addBookToLibrary(hobbit);
 
 showButton.addEventListener("click", () => {
   dialog.showModal();
+  dialog.classList.add("open");
 });
 
 closeButton.addEventListener("click", () => {
   dialog.close();
+  dialog.classList.remove("open");
+  setTimeout(() => dialog.close(), 500);
 });
 
 dialogForm.addEventListener("submit", (e) => {
