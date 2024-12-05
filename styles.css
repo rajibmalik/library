@@ -192,3 +192,43 @@ label {
 #modalBtn:hover {
   opacity: 60%;
 }
+
+#cardGridContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: blue;
+}
+
+#cardGrid {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  margin: 75px;
+  width: 100%;
+  background-color: red;
+}
+
+.bookCard {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: grey;
+  height: 250px;
+  width: 250px;
+  border-radius: 10px;
+  font-size: 1.2rem;
+  padding: 10px;
+  font-weight: 600;
+}
+
+#cardInfo {
+}
+
+.bookRow {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 20px;
+}
