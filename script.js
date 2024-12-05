@@ -4,20 +4,20 @@ import { Library } from "./Library.js";
 const dialog = document.querySelector("dialog");
 const showButton = document.getElementById("modalBtn");
 const closeButton = document.getElementById("closeBtn");
+const readButtons = document.getElementsByClassName("readBtn");
 const dialogForm = document.getElementById("dialogForm");
 
 const library = new Library();
-const hobbit = new Book("The Hobbit", "J.R.R Tolkien", 295, "No");
+const hobbit = new Book("The Hobbit", "J.R.R Tolkien", 295, true);
+const journey = new Book("journey ", "john", 278, false);
 library.addBookToLibrary(hobbit);
 library.addBookToLibrary(hobbit);
 library.addBookToLibrary(hobbit);
 library.addBookToLibrary(hobbit);
-library.addBookToLibrary(hobbit);
-library.addBookToLibrary(hobbit);
-library.addBookToLibrary(hobbit);
-library.addBookToLibrary(hobbit);
-library.addBookToLibrary(hobbit);
-library.addBookToLibrary(hobbit);
+library.addBookToLibrary(journey);
+library.addBookToLibrary(journey);
+library.addBookToLibrary(journey);
+library.addBookToLibrary(journey);
 
 showButton.addEventListener("click", () => {
   dialog.showModal();

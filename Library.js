@@ -14,6 +14,7 @@ export class Library {
   }
 
   printBooks() {
+    this.cardGrid.innerHTML = "";
     let bookRow = document.createElement("div");
     bookRow.className = "bookRow";
 
@@ -32,9 +33,38 @@ export class Library {
       );
 
       const deleteButton = document.createElement("button");
-      deleteButton.className = "deleteButton";
+      deleteButton.classList.add("deleteBtn");
+      deleteButton.id = book.id;
+      deleteButton.classList.add("fa-solid", "fa-trash");
+
+      const readButton = document.createElement("button");
+      readButton.classList.add("readBtn");
+      readButton.classList.add("fa-brands", "fa-readme");
+
+      if (book.read) {
+        readButton.classList.add("read");
+      }
+
+      deleteButton.addEventListener("click", () => {
+        console.log("DELETE" + deleteButton.id);
+
+        this.myLibrary = this.myLibrary.filter(
+          (book) => book.id.toString() !== deleteButton.id
+        );
+
+        this.printBooks();
+      });
+
+      readButton.addEventListener("click", () => {
+        if (readButton.classList.contains("read")) {
+          readButton.classList.remove("read");
+        } else {
+          readButton.classList.add("read");
+        }
+      });
 
       bookCard.buttonContainer.appendChild(deleteButton);
+      bookCard.buttonContainer.appendChild(readButton);
 
       this.addBookCard(bookRow, bookCard);
       this.cardGrid.appendChild(bookRow);

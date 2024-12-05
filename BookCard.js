@@ -15,17 +15,12 @@ export class BookCard {
     this.pages.textContent = `Pages: ${pages}`;
     this.pages.className = "cardInfo";
 
-    this.read = document.createElement("p");
-    this.read.textContent = read;
-    this.read.className = "cardInfo";
-
     this.buttonContainer = document.createElement("div");
     this.buttonContainer.className = "bookCardButtonContainer";
 
     this.card.appendChild(this.title);
     this.card.appendChild(this.author);
     this.card.appendChild(this.pages);
-    this.card.appendChild(this.read);
     this.card.appendChild(this.buttonContainer);
   }
 
