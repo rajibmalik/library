@@ -10,33 +10,78 @@
       type="text/css"
     />
     <link rel="stylesheet" href="styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
     <script type="module" src="script.js" defer></script>
   </head>
   <body>
-    <div id="buttonContainer">
-      <button id="addBookBtn">Add new book</button>
+    <dialog>
+      <div id="closeBtnContainer">
+        <i class="fa-solid fa-x" id="closeBtn"></i>
+      </div>
+
+      <div id="dialogHeaderContainer">
+        <h3 id="dialogHeader">Add a new book</h3>
+      </div>
+
+      <form id="dialogForm" method="dialog">
+        <div id="inputContainer">
+          <input
+            class="inputBox"
+            id="titleInput"
+            type="text"
+            placeholder="Title"
+          />
+          <input
+            class="inputBox"
+            id="authorInput"
+            type="text"
+            placeholder="Author"
+          />
+          <input
+            class="inputBox"
+            id="pagesInput"
+            type="text"
+            placeholder="Pages"
+          />
+        </div>
+
+        <div id="readContainer">
+          <label for="read">
+            Finished reading?
+            <input id="readInput" type="checkbox" />
+          </label>
+        </div>
+
+        <div id="submitBtnContainer">
+          <input id="submitBtn" type="submit" id="submit" value="Submit" />
+        </div>
+      </form>
+    </dialog>
+
+    <div id="modalBtnContainer">
+      <button id="modalBtn">Add book</button>
     </div>
 
-    <div id="formContainer"></div>
-    <table id="bookTable">
-      <caption>
-        Books in the library
-      </caption>
-      <thead>
-        <tr>
-          <th scope="col">Name</th>
-          <th scope="col">Author</th>
-          <th scope="col">Pages</th>
-          <th scope="col">Read</th>
-        </tr>
-      </thead>
+    <div id="tableContainer">
+      <table id="bookTable">
+        <caption>
+          Books in the library
+        </caption>
+        <thead>
+          <tr>
+            <th scope="col">Name</th>
+            <th scope="col">Author</th>
+            <th scope="col">Pages</th>
+            <th scope="col">Read</th>
+          </tr>
+        </thead>
 
-      <tbody id="bookTableBody"></tbody>
-      <tfoot id="bookTableFooter">
-        <!-- <tr>
-          <td colspan="5">Total number of books: 5</td>
-        </tr> -->
-      </tfoot>
-    </table>
+        <tbody id="bookTableBody"></tbody>
+        <tfoot id="bookTableFooter"></tfoot>
+      </table>
+    </div>
   </body>
 </html>

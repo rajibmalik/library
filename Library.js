@@ -15,6 +15,7 @@ export class Library {
   printBooks() {
     for (let i = 0; i < this.myLibrary.length; i++) {
       const row = document.createElement("tr");
+      row.id = this.myLibrary[i];
       const title = document.createElement("th");
       const author = document.createElement("td");
       const pages = document.createElement("td");
