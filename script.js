@@ -14,10 +14,12 @@ library.addBookToLibrary(hobbit);
 library.addBookToLibrary(hobbit);
 library.addBookToLibrary(hobbit);
 library.addBookToLibrary(hobbit);
-library.addBookToLibrary(journey);
-library.addBookToLibrary(journey);
-library.addBookToLibrary(journey);
-library.addBookToLibrary(journey);
+library.addBookToLibrary(hobbit);
+
+library.addBookToLibrary(hobbit);
+library.addBookToLibrary(hobbit);
+library.addBookToLibrary(hobbit);
+library.addBookToLibrary(hobbit);
 
 showButton.addEventListener("click", () => {
   dialog.showModal();

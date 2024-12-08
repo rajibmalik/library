@@ -4,10 +4,11 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css?family=Rock+Salt"
+      href="https://fonts.googleapis.com/css2?family=Tangerine:wght@400;700&display=swap"
       rel="stylesheet"
-      type="text/css"
     />
     <link rel="stylesheet" href="styles.css" />
     <link
@@ -17,6 +18,24 @@
     <script type="module" src="script.js" defer></script>
   </head>
   <body>
+    <div id="headerContainer">
+      <h1 id="header">Library</h1>
+    </div>
+
+    <div id="mainContainer">
+      <div id="modalBtnContainer">
+        <button id="modalBtn">Add book</button>
+      </div>
+
+      <div id="cardGridContainer">
+        <div id="cardGrid"></div>
+      </div>
+    </div>
+
+    <div id="footerContainer">
+      <h2 id="footerAuthor">Copyright © 2024 rajibmalik</h2>
+    </div>
+
     <dialog>
       <div id="closeBtnContainer">
         <i class="fa-solid fa-x" id="closeBtn"></i>
@@ -60,13 +79,5 @@
         </div>
       </form>
     </dialog>
-
-    <div id="modalBtnContainer">
-      <button id="modalBtn">Add book</button>
-    </div>
-
-    <div id="cardGridContainer">
-      <div id="cardGrid"></div>
-    </div>
   </body>
 </html>

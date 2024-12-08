@@ -4,15 +4,15 @@ export class BookCard {
     this.card.className = "bookCard";
 
     this.title = document.createElement("p");
-    this.title.textContent = `Title: ${title}`;
+    this.title.textContent = `${title}`;
     this.title.className = "cardInfo";
 
     this.author = document.createElement("p");
-    this.author.textContent = `Author: ${author}`;
+    this.author.textContent = `${author}`;
     this.author.className = "cardInfo";
 
     this.pages = document.createElement("p");
-    this.pages.textContent = `Pages: ${pages}`;
+    this.pages.textContent = `${pages} pages`;
     this.pages.className = "cardInfo";
 
     this.buttonContainer = document.createElement("div");

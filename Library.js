@@ -35,19 +35,18 @@ export class Library {
       const deleteButton = document.createElement("button");
       deleteButton.classList.add("deleteBtn");
       deleteButton.id = book.id;
-      deleteButton.classList.add("fa-solid", "fa-trash");
+      deleteButton.textContent = "Delete";
 
       const readButton = document.createElement("button");
       readButton.classList.add("readBtn");
-      readButton.classList.add("fa-brands", "fa-readme");
+      readButton.textContent = "Not read";
 
       if (book.read) {
         readButton.classList.add("read");
+        readButton.textContent = "Read";
       }
 
       deleteButton.addEventListener("click", () => {
-        console.log("DELETE" + deleteButton.id);
-
         this.myLibrary = this.myLibrary.filter(
           (book) => book.id.toString() !== deleteButton.id
         );
@@ -58,8 +57,10 @@ export class Library {
       readButton.addEventListener("click", () => {
         if (readButton.classList.contains("read")) {
           readButton.classList.remove("read");
+          readButton.textContent = "Not read";
         } else {
           readButton.classList.add("read");
+          readButton.textContent = "Read";
         }
       });
 
