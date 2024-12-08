@@ -8,18 +8,6 @@ const readButtons = document.getElementsByClassName("readBtn");
 const dialogForm = document.getElementById("dialogForm");
 
 const library = new Library();
-const hobbit = new Book("The Hobbit", "J.R.R Tolkien", 295, true);
-const journey = new Book("journey ", "john", 278, false);
-library.addBookToLibrary(hobbit);
-library.addBookToLibrary(hobbit);
-library.addBookToLibrary(hobbit);
-library.addBookToLibrary(hobbit);
-library.addBookToLibrary(hobbit);
-
-library.addBookToLibrary(hobbit);
-library.addBookToLibrary(hobbit);
-library.addBookToLibrary(hobbit);
-library.addBookToLibrary(hobbit);
 
 showButton.addEventListener("click", () => {
   dialog.showModal();
