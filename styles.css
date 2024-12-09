@@ -218,6 +218,11 @@ label {
   width: 180px;
 }
 
+.bookCard.delete {
+  transition: 0.5s ease-in-out;
+  transform: scale(0);
+}
+
 .bookRow {
   display: flex;
   flex-direction: row;

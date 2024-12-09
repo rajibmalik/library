@@ -39,11 +39,15 @@ export class Library {
       }
 
       bookCard.deleteBtn.addEventListener("click", () => {
-        this.myLibrary = this.myLibrary.filter(
-          (book) => book.id.toString() !== bookCard.deleteBtn.id
-        );
+        bookCard.card.classList.add("delete");
 
-        this.printBooks();
+        setTimeout(() => {
+          this.myLibrary = this.myLibrary.filter(
+            (book) => book.id.toString() !== bookCard.deleteBtn.id
+          );
+
+          this.printBooks();
+        }, 500);
       });
 
       bookCard.readBtn.addEventListener("click", () => {
