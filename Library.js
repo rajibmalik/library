@@ -29,43 +29,32 @@ export class Library {
         book.title,
         book.author,
         book.pages,
-        book.read
+        book.read,
+        book.id
       );
 
-      const deleteButton = document.createElement("button");
-      deleteButton.classList.add("deleteBtn");
-      deleteButton.id = book.id;
-      deleteButton.textContent = "Delete";
-
-      const readButton = document.createElement("button");
-      readButton.classList.add("readBtn");
-      readButton.textContent = "Not read";
-
       if (book.read) {
-        readButton.classList.add("read");
-        readButton.textContent = "Read";
+        bookCard.readBtn.classList.add("read");
+        bookCard.readBtn.textContent = "Read";
       }
 
-      deleteButton.addEventListener("click", () => {
+      bookCard.deleteBtn.addEventListener("click", () => {
         this.myLibrary = this.myLibrary.filter(
-          (book) => book.id.toString() !== deleteButton.id
+          (book) => book.id.toString() !== bookCard.deleteBtn.id
         );
 
         this.printBooks();
       });
 
-      readButton.addEventListener("click", () => {
-        if (readButton.classList.contains("read")) {
-          readButton.classList.remove("read");
-          readButton.textContent = "Not read";
+      bookCard.readBtn.addEventListener("click", () => {
+        if (bookCard.readBtn.classList.contains("read")) {
+          bookCard.readBtn.classList.remove("read");
+          bookCard.readBtn.textContent = "Not read";
         } else {
-          readButton.classList.add("read");
-          readButton.textContent = "Read";
+          bookCard.readBtn.classList.add("read");
+          bookCard.readBtn.textContent = "Read";
         }
       });
-
-      bookCard.buttonContainer.appendChild(deleteButton);
-      bookCard.buttonContainer.appendChild(readButton);
 
       this.addBookCard(bookRow, bookCard);
       this.cardGrid.appendChild(bookRow);
